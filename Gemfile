@@ -6,14 +6,14 @@ gem 'faker',                   '1.6.6'
 gem 'puma',                    '3.4.0'
 gem 'sass-rails',              '5.0.6'
 gem 'uglifier',                '3.0.0'
-gem 'coffee-rails',            '4.2.1'
+# gem 'coffee-rails',            '4.2.1'
 gem 'jquery-rails',            '4.1.1'
 gem 'turbolinks',              '5.0.0'
 gem 'jbuilder',                '2.4.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
-  gem 'byebug',  '9.0.0', platform: :mri
+  gem 'pry-byebug'
 end
 
 group :development do

@@ -8,7 +8,12 @@ class MessagesController < ApplicationController
 	def create
 		message = current_user.messages.build(message_params)
 		if message.save
-			ActionCable.server.broadcast 'room_channel', {
+			ActionCable.server.broadcast "covertsation-#{current_user.id}", {
+				content: message.content,
+				username: message.user.username
+			}
+
+			ActionCable.server.broadcast "covertsation-#{3}", {
 				content: message.content,
 				username: message.user.username
 			}
